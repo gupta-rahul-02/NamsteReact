@@ -1,7 +1,7 @@
 
 # Namaste React
 
-1. ** What is Emmet ? **
+1. __What is Emmet ?__
 Ans :-  Emmet is plug in for many popular text editors which improves HTML and CSS workflow.
 
 2. **Difference between library and framework?**
