@@ -56,3 +56,13 @@ page.
 
 Ans :-  Caching, HTTPS, HMR, size optimization, tree shaking, 
 
+
+9. __What is `.gitignore`? What should we add and not add into it?__
+
+
+Ans :-  The . gitignore file tells Git which files to ignore when committing your project to the GitHub repository. The file and folder which can be regenerated on server should not added in gitignore file. The files 
+or folder which cant be regenereted should be added.
+
+
+
+

@@ -2,14 +2,17 @@
   "name": "l2_igninting_app_l2",
   "version": "1.0.0",
   "description": "",
-  "main": "App.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "parcel": "^2.9.3",
     "process": "^0.11.10"
   },
@@ -17,7 +20,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-
   "browserslist": [
     "last 2 versions"
   ]
