@@ -101,7 +101,7 @@ const restaurantList = [
     cusines: ["North Indian", "Chinese"],
     rating: "4.4",
     totalRating: "10K+",
-    id:"o4y0th7394874"
+    id:"o4y0th7394874F"
   },
 ];
 
