@@ -20,7 +20,6 @@ export const Body = () => {
           onClick={() => {
             const data = filterData(searchText, restaurantList)
             setRestaurant(data)
-            console.log(data)
           }}
         >
           Search
