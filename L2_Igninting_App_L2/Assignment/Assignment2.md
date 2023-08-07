@@ -64,5 +64,33 @@ Ans :-  The . gitignore file tells Git which files to ignore when committing you
 or folder which cant be regenereted should be added.
 
 
+10. __What is the difference between `package.json` and `package-lock.json__
 
 
+Ans :-  __'package.json'__ :- It contains basic information about the project. It records important metadata
+        about the project. It contains information such as name,description, script  and dependencies.
+        __'package-lock.json'__ :- It describes the exact tree that was generated to allow subsequent installs to have the identical tree. It is automatically generated for those operations where npm modifies either node_modules tree or package.json. It contains the name, dependencies, and locked version of the project.     
+
+
+11. __Why should I not modify `package-lock.json`?__
+
+
+Ans :-  It is a generated file and is not designed to be manually edited. Its purpose is to track the entire tree of dependencies (including dependencies of dependencies) and the exact version of each dependency. You should commit package-lock. json to your code repository.
+
+
+12. __What is `node_modules` ? Is it a good idea to push that on git?__
+
+
+Ans :-  The node_modules folder contains all the saved JavaScript dependencies of a project. Since this folder often has a massive size, developers typically do not commit it inside the Git repository.
+
+
+13. __- What is the `dist` folder?__
+
+
+Ans :- The /dist folder contains the minimized version of the source code. The code present in the /dist folder is actually the code which is used on production web applications. Along with the minified code, the /dist folder also comprises of all the compiled modules that may or may not be used with other systems.
+
+
+14. __What is `browserlists`__
+
+
+Ans :-  One of the most popular frontend library dependencies, Browserslist defines and shares the list of target browsers between various frontend build tools.
