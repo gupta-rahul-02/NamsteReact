@@ -35,3 +35,9 @@
     display: flex;
     flex-wrap:wrap;
 }
+
+.shimmer{
+  background-color: #ccc;
+  border: #ccc;
+  border-radius: 3px;
+}
