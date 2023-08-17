@@ -1,7 +1,7 @@
 import { useState , useEffect} from "react";
-import { restaurantList } from "../constants/constants";
 import RestrauntCard from "./RestrauntCard";
 import Shimmer from "./Shimmer";
+import {Link} from "react-router-dom"
 
 const filterData = (searchText, restaurants) => {
   return restaurants.filter((restaurants) =>
@@ -19,7 +19,7 @@ export const Body = () => {
   },[])
 
   async function getRestaurants() {
-    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.301054&lng=73.254065&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.3071588&lng=73.1812187&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
     const json = await data.json();
     setAllRestaurant(json?.data?.cards[2]?.card?.card?.gridElements.infoWithStyle.restaurants)
     setFilteredRestaurant(json?.data?.cards[2]?.card?.card?.gridElements.infoWithStyle.restaurants)
@@ -61,7 +61,12 @@ export const Body = () => {
 
       <div className="restaurant-list">
         {filteredRestaurant.length  === 0 ? <h1>No Restaurant Found</h1> : filteredRestaurant.map((restaurant) => {
-          return <RestrauntCard {...restaurant.info} key={restaurant.info.id} />;
+          return (
+            <RestrauntCard {...restaurant.info} key={restaurant.info.id} />
+
+
+          
+          );
         })}
       </div>
     </>

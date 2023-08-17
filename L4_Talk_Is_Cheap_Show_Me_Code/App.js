@@ -3,15 +3,51 @@ import ReactDOM from "react-dom/client";
 import Header from "./src/component/Header";
 import {Body} from "./src/component/Body"
 import Footer from "./src/component/Footer";
+import About from "./src/component/About"
+import Contact  from "./src/component/Contact"
+import Error  from "./src/component/Error";
+import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom"
+import RestrauntMenu from "./src/component/RestrauntMenu";
+import Cart from "./src/component/Cart"
 const AppLayout = () => {
   return (
     <>
       <Header />
-      <Body />
+      <Outlet/>
       <Footer/>
-    </>
+</>
   );
 };
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout/>,
+    errorElement: <Error/>,
+    children:[
+      {
+        path:"/",
+        element: <Body/>
+      },
+      {
+        path: "/about",
+        element: <About/>
+      },
+      {
+        path: "/contact",
+        element: <Contact/>
+      },
+      {
+        path: "/cart",
+        element: <Cart/>
+      },
+      {
+        path:"/restaurant/:resId",
+        element: <RestrauntMenu/>
+      }
+    ]
+  }
+])
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+root.render(<RouterProvider router={router}/>);
