@@ -10,11 +10,12 @@ import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom"
 import RestrauntMenu from "./src/component/RestrauntMenu";
 import Cart from "./src/component/Cart"
 import Signup from "./src/component/Signnup";
+import Profile from "./src/component/Profile";
 const AppLayout = () => {
   return (
     <>
       <Header />
-      <Signup></Signup>
+      {/* <Signup></Signup> */}
       <Outlet/>
       <Footer/>
 </>
@@ -33,7 +34,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About/>
+        element: <About/>,
+        children:[   //nested routing
+          {
+            path:"profile", // path :- localhost:1234/about/profile
+            element:<Profile/>
+          }
+        ]
       },
       {
         path: "/contact",
