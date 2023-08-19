@@ -9,10 +9,12 @@ import Error  from "./src/component/Error";
 import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom"
 import RestrauntMenu from "./src/component/RestrauntMenu";
 import Cart from "./src/component/Cart"
+import Signup from "./src/component/Signnup";
 const AppLayout = () => {
   return (
     <>
       <Header />
+      <Signup></Signup>
       <Outlet/>
       <Footer/>
 </>
