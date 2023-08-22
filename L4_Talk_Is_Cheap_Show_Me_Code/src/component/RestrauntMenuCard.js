@@ -1,3 +1,4 @@
+import { useState } from "react/cjs/react.production.min"
 import { imageCDN } from "../constants/constants"
 const RestrauntMenuCard = ({imageId,name,price,description,itemAttribute,variantsV2,defaultPrice}) =>{
     return (
@@ -5,9 +6,8 @@ const RestrauntMenuCard = ({imageId,name,price,description,itemAttribute,variant
             <div className="details">
             <p>{itemAttribute.vegClassifier}</p>
             <h3>{name}</h3>
-            {/* {(typeof(price) === undefined ? <p>{price/100}/- Rs.</p> :  <p>{defaultPrice/100}/- Rs.</p>)} */}
-            {/* <p>{defaultPrice/100}-/ Rs.</p> */}
-            <p>{price/100}/- Rs.</p>
+            {/* {(typeof(price) === undefined ? (<p>{price/100}/- Rs.</p>) : ( <p>{defaultPrice/100}/- Rs.</p>))} */}
+            <p>{price/100}-/ Rs.</p>
             <p>{description}</p>
             </div>
             <div className="image">

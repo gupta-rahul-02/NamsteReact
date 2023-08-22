@@ -3,10 +3,14 @@ import RestrauntCard from "./RestrauntCard";
 import Shimmer from "./Shimmer";
 import { filterData } from "../utils/helper";
 import useRestaurant from "../utils/useRestaurant";
-
+import useOnline from "../utils/useOnline";
 export const Body = () => {
   const [searchText, setSearchText] = useState("");
   const { allRestaurant, filteredRestaurant } = useRestaurant();
+  const isOnline = useOnline()
+  if (!isOnline){
+    return <h1>You Are Offline!!! Please check your connection</h1>
+  }
   //early return
   if (!allRestaurant) return null;
   return allRestaurant.length === 0 ? (
@@ -29,8 +33,6 @@ export const Body = () => {
         <button
           onClick={() => {
             const data = filterData(searchText, allRestaurant);
-            //setRestaurant(data);
-
             setFilteredRestaurant(data);
           }}
         >
