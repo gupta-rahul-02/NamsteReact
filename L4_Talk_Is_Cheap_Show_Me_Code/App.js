@@ -12,17 +12,19 @@ import Cart from "./src/component/Cart";
 import Signup from "./src/component/Signnup";
 import Profile from "./src/component/Profile";
 import Shimmer from "./src/component/Shimmer";
+import { Provider } from "react-redux";
+import store from "./src/utils/store";
 
 //import Instamart from "./src/component/Instamart";
 const Instamart = lazy(() => import("./src/component/Instamart"));
 const AppLayout = () => {
   return (
-    <>
+    <Provider store={store}>
       <Header />
       {/* <Signup></Signup> */}
       <Outlet />
       <Footer />
-    </>
+    </Provider>
   );
 };
 

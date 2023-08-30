@@ -14,7 +14,7 @@ componentDidMount(){
   render(){
     console.log("Parent render")
     return (
-      <div>
+      <div className="mt-36">
         <h1>About Page</h1>
         <p>Building Food App called Foodie Adda</p>
         {/* <Outlet/>   */}
